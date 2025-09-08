@@ -1,0 +1,33 @@
+header{
+    padding: 1rem 2rem;
+    background-color: #FFF;
+    box-shadow:  0 2px 4px rgba(0,0,0,0.1);
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+button{
+    padding: 0.5rem 1rem;
+    background-color: #000;
+    color: #FFF ;
+    border: none  ;
+    border-radius: 4px;
+}
+.shop-menu{
+    position: relative;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
