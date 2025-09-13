@@ -1,1 +1,18 @@
-<p>product-card works!</p>
+<div class="card position-relative overflow-hidden">
+    <img [src]="product?.imageUrl" class="img-fluid category-image" alt="">
+    <div class="icon-buttom p-4 d-flex  justify-content-between flex-column">
+        <div class="d-flex align-items-end justify-content-center flex-column">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-solid fa-left-right my-2"></i>
+            <i class="fa-solid fa-eye"></i>
+        </div>
+
+        <button class="btn btn-white text-center">Add To card</button>
+
+    </div>
+</div>
+<div class="my-2">
+    <h5>{{product?.title}}</h5>
+    <h6 class="text-muted">{{product?.description}}</h6>
+    <p>{{product?.price}} <span class="text-muted mx-2 text-decoration-line-through">{{product?.oldPrice}}</span></p>
+</div>

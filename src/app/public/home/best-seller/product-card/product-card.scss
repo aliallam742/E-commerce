@@ -1,0 +1,39 @@
+.card{
+    background-color: #FAFAFA;
+border: none;
+padding:50px;
+}
+.icon-buttom{
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000000,  0.1);
+    transition: all 1s ease-in-out;
+
+}
+.category-image {
+  height: 250px;
+}
+.btn-white{
+    background-color: #FFFFFF;
+}
+.btn-white:hover{
+    background-color: #ffffffee;
+}
+.icon-buttom i{
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+.card:hover .icon-buttom {
+    top: 0 !important;
+}
+

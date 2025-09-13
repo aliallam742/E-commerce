@@ -1,1 +1,14 @@
-<p>best-seller works!</p>
+<section class="our-best-seller">
+    <h2 class="section-title text-center my-5">Our Best Seller</h2>
+    <div class="container">
+        <div class="row">
+            @for(product of bestSellers; track product.title) {
+            <div class="col-md-3">
+                <app-product-card [product]="product"></app-product-card>
+            </div>
+
+            }
+
+        </div>
+    </div>
+</section>
