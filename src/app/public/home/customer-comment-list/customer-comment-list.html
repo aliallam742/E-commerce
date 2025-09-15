@@ -1,1 +1,24 @@
-<p>customer-comment-list works!</p>
+<section class="container my-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="py-4">
+            <h2 class="fw-bold mb-0 shop-by-categories mx-2 ">What our customer say's</h2>
+        </div>
+        <div class="navigations-btns">
+            <button class="btn pervious-btn px-3 me-3" type="button">
+                <i class="fa-solid fa-left-long"></i>
+            </button>
+            <button class="btn btn-dark px-3" type="button">
+                <i class="fa-solid fa-right-long"></i>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        @for (customer of customersComments; track customer.name) {
+        <div class="col-lg-4 col-md-6 col-12 ">
+            <app-customer-comment [customer]="customer" />
+        </div>
+
+        }
+    </div>
+
+</section>
