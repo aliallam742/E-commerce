@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+
 import { MegaMenu } from "./mega-menu/mega-menu";
 
 @Component({
   selector: 'app-header',
-  imports: [MegaMenu],
+  imports: [RouterModule,MegaMenu],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
