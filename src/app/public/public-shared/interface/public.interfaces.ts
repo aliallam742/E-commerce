@@ -1,4 +1,3 @@
-import { BestSeller } from './../../home/best-seller/best-seller';
 export interface CategoriesList {
     name: string;
     imageUrl: string;

@@ -1,0 +1,91 @@
+<div class="container-fluid px-0 h-100 overflow-hidden">
+    <div class="row mx-0">
+      <div class="col-md-7 px-0">
+        <img src="assets/images/register.png" alt="img" class="img-fluid w-100 img" />
+      </div>
+      <div class="col-md-5">
+        <div class="d-flex justify-content-center align-items-start h-100 flex-column px-5">
+          <div class="mb-3">
+            <h1 class="fw-bold">Create New Account</h1>
+            <div class="text-muted">Please enter details</div>
+          </div>
+          <form [formGroup]="form" (ngSubmit)="signUp()" class="row mx-0 w-100">
+            <mat-form-field class="col-12" appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input type="text" matInput formControlName="firstName" />
+              @if (form.get('firstName')?.hasError('required')) {
+                <mat-error>First Name is required</mat-error>
+              }
+              @if (form.get('firstName')?.hasError('minlength')) {
+                <mat-error>First Name must be 4 characters or more</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field class="col-12" appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input type="text" matInput formControlName="lastName" />
+              @if (form.get('lastName')?.hasError('required')) {
+                <mat-error>Last Name is required</mat-error>
+              }
+              @if (form.get('lastName')?.hasError('minlength')) {
+                <mat-error>Last Name must be 4 characters or more</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field class="col-12" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="email" />
+              @if (form.get('email')?.hasError('required')) {
+                <mat-error>Email is required</mat-error>
+              }
+              @if (form.get('email')?.hasError('email')) {
+                <mat-error>Email not valid</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field class="col-12" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input [type]="isPasswordVisible() ? 'text' : 'password'" matInput formControlName="password" />
+              <mat-icon matSuffix (click)="togglePasswordVisibility()" class="cursor-pointer">
+                {{isPasswordVisible() ? 'visibility_off' : 'visibility'}}
+              </mat-icon>
+              @if (form.get('password')?.hasError('required')) {
+                <mat-error>Password is required</mat-error>
+              }
+              @if (form.get('password')?.hasError('minlength')) {
+                <mat-error>Password must be 8 characters or more</mat-error>
+              }
+            </mat-form-field>
+
+            <mat-form-field class="col-12" appearance="outline">
+              <mat-label>Repeat Password</mat-label>
+              <input [type]="isRepeatPasswordVisible() ? 'text' : 'password'" matInput formControlName="repeatPassword" />
+              <mat-icon matSuffix (click)="toggleRepeatPasswordVisibility()" class="cursor-pointer">
+                {{isRepeatPasswordVisible() ? 'visibility_off' : 'visibility'}}
+              </mat-icon>
+              @if (form.get('repeatPassword')?.hasError('required')) {
+                <mat-error>Repeat Password is required</mat-error>
+              }
+              @if (form.get('repeatPassword')?.hasError('minlength')) {
+                <mat-error>Repeat Password must be 8 characters or more</mat-error>
+              }
+               @if (form.get('repeatPassword')?.hasError('mustMatch')) {
+                <mat-error>Repeat Password must matching password</mat-error>
+              }
+              
+            </mat-form-field>
+            <div class="col-12">
+              <mat-checkbox formControlName="acceptTerms">
+                I agree to the <b>Terms & Conditions</b>
+              </mat-checkbox>
+            </div>
+            
+            <div class="col-12 mt-3">
+              <button type="submit" class="btn btn-dark py-2 w-100">Signup</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

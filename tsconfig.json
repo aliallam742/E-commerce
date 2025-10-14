@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./src",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -13,7 +14,13 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "paths": {
+      "@app/shared":["app/shared/shared-module.ts"],
+      "@app/services":["app/shared/services"]
+    },
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

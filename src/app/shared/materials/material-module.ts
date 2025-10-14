@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon'
 
 
-
-const modules = [MatInputModule  , MatCheckboxModule,ReactiveFormsModule ,  CommonModule]
+const modules = [MatInputModule  , MatCheckboxModule, MatIconModule]
 
 @NgModule({
   declarations: [],

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MaterialModule } from '../../shared/modules/material-module';
 import { Router } from '@angular/router';
+import { SharedModule } from '@app/shared';
 
 @Component({
   selector: 'app-login',
-  imports: [MaterialModule ,],
+  imports: [SharedModule],
   templateUrl: './login.html',
   styleUrl: './login.scss'
 })
 export class Login {
 
-form!: FormGroup;
+form: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {}
 
@@ -27,6 +27,10 @@ form!: FormGroup;
 
   navigateToForgetPasswordPage(): void {
     this.router.navigateByUrl('forget-password');
+  }
+
+  navigateToRegisterPage(): void {
+    this.router.navigateByUrl('register');
   }
 
   private initFormModels(): void {
