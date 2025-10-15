@@ -6,7 +6,7 @@
     <div class="col-md-5">
       <div class="d-flex justify-content-center align-items-start h-100 flex-column px-5">
         <div class="mb-3">
-          <h1 class="fw-bold">Welcome 👋</h1>
+          <h1 class="fw-bold">{{ 'comman.welcome' | translate}} 👋</h1>
           <div class="text-muted">Please login here</div>
         </div>
         <form [formGroup]="form" (ngSubmit)="signIn()" class="row w-100">

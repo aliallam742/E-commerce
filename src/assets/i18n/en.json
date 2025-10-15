@@ -1,0 +1,11 @@
+{
+    "comman":{
+        "welcome":"welcome to our store",
+        "login":"Login",
+        "register":"Register",
+        "email":"Email",
+        "password":"Password",
+        "confirmPassword":"Confirm Password",
+        "logout":"Logout"
+    }
+}

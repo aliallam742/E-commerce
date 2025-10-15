@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, OnInit,  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslationService } from '@app/services';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('e-commerce');
+export class App  implements OnInit {
+
+  langService= inject(TranslationService);
+
+  ngOnInit(): void {  
+    this.langService.setDefaultLang('ar');
+  }
 }
